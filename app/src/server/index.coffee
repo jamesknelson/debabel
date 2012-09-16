@@ -3,7 +3,10 @@ path = require 'path'
 express = require 'express'
 gzippo = require 'gzippo'
 derby = require 'derby'
+
 app = require '../app'
+admin = require '../admin'
+
 serverError = require './serverError'
 
 
@@ -42,6 +45,7 @@ expressApp
   .use(store.modelMiddleware())
   # Creates an express middleware from the app's routes
   .use(app.router())
+  .use(admin.router())
   .use(expressApp.router)
   .use(serverError root)
 
