@@ -1,0 +1,40 @@
+<head>
+  <title>Debabel</title>
+</head>
+
+<body>
+  
+
+
+  <div id="splash">
+    <header>
+      <h1>Debabel</h1>
+      <h2>The Magical Language Teacher</h2>
+    </header>
+  </div>
+
+  <footer>
+  	<div id="title"></div>
+
+  	{{> menu}}
+
+  </footer>
+
+  
+</body>
+
+<template name="menu">
+  <div id="menu">
+    <input type="checkbox" id="menu-toggle-checkbox">
+    <label for="menu-toggle-checkbox" unselectable="on" onclick="">
+      <span class='gear icon'></span>
+      <span class='net'></span>
+    </label>
+    <ul>
+      <li id="progress" unselectable="on">progress</li>
+      <li id="questions" unselectable="on">questions</li>
+      <li id="help" unselectable="on">help</li>
+      <li id="account" unselectable="on">account</li>
+    </ul>
+  </div>
+</template>

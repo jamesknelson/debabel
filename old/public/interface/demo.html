@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Debabel</title>
+
+
+<!-- the core stuff -->
+<script type="text/javascript" src="javascripts/soundmanager2.js"></script>
+
+<script type="text/javascript">
+
+	soundManager.url = 'swf/'; // path to directory containing SM2 SWF
+
+	soundManager.useFastPolling = true; // increased JS callback frequency, combined with useHighPerformance = true
+
+	soundManager.useHTML5Audio = true;
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	
+	soundManager.onready(function() {
+		var mySound = soundManager.createSound({
+			id: 'aSound',
+			url: 'mission.ogg'
+			// onload: myOnloadHandler,
+			// other options here..
+		});
+
+	  mySound.play();
+	});
+
+</script>
+</body>
+</html>
