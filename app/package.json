@@ -8,8 +8,7 @@
     "derby-ui-boot": "git://github.com/jamesknelson/derby-ui-boot.git#master",
     "express": "3.0.0beta4",
     "i18next": ">= 1.5.8",
-    "gzippo": ">=0.1.7",
-    "canvas": ">=0.13.1"
+    "gzippo": ">=0.1.7"
   },
   "private": true,
   "devDependencies": {
