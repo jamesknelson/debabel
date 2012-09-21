@@ -5,6 +5,7 @@
   "main": "./server.js",
   "dependencies": {
     "derby": "*",
+    "derby-ui-boot": "*",
     "express": "3.0.0beta4",
     "i18next": ">= 1.5.8",
     "gzippo": ">=0.1.7",
@@ -13,5 +14,9 @@
   "private": true,
   "devDependencies": {
     "coffee-script": ">=1.3.3"
+  },
+  "engines": {
+    "node": "0.8.8",
+    "npm": "1.1.59"
   }
 }
