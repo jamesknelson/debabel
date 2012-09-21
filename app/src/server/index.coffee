@@ -1,7 +1,7 @@
 http = require 'http'
 path = require 'path'
 express = require 'express'
-gzippo = require 'gzippo'
+#gzippo = require 'gzippo'
 derby = require 'derby'
 
 app = require '../app'
@@ -25,7 +25,7 @@ publicPath = path.join root, 'public'
 expressApp
   .use(express.favicon())
   # Gzip static files and serve from memory
-  .use(gzippo.staticGzip publicPath, maxAge: ONE_YEAR)
+  #.use(gzippo.staticGzip publicPath, maxAge: ONE_YEAR)
   # Gzip dynamically rendered content
   .use(express.compress())
 
