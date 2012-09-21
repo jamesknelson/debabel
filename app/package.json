@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "main": "./server.js",
   "dependencies": {
-    "derby": "*",
-    "derby-ui-boot": "*",
+    "derby": "https://github.com/jamesknelson/derby.git",
+    "derby-ui-boot": "https://github.com/jamesknelson/derby-ui-boot.git",
     "express": "3.0.0beta4",
     "i18next": ">= 1.5.8",
     "gzippo": ">=0.1.7",
