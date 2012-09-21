@@ -8,7 +8,7 @@
     "derby": "git://github.com/jamesknelson/derby.git#master",
     "derby-ui-boot": "git://github.com/jamesknelson/derby-ui-boot.git#master",
     "express": "3.0.0beta4",
-    "i18next": ">= 1.5.8",
+    "i18next": "git://github.com/jamesknelson/i18next-node.git",
     "gzippo": ">=0.1.7"
   },
   "private": true,
