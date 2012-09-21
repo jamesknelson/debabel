@@ -1,1 +1,1 @@
-derby = require('derby').run(__dirname + '/lib/server')
+require('derby').run(__dirname + '/src/bootstrap');
