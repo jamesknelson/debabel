@@ -12,9 +12,7 @@
     "gzippo": ">=0.1.7"
   },
   "private": true,
-  "devDependencies": {
-    "coffee-script": ">=1.3.3"
-  },
+  "devDependencies": {},
   "engines": {
     "node": "0.8.8",
     "npm": "1.1.x"
