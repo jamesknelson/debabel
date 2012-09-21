@@ -25,6 +25,7 @@ publicPath = path.join root, 'public'
 expressApp
   .use(express.favicon())
   # Gzip static files and serve from memory
+  .use(express.static(publicPath))
   #.use(gzippo.staticGzip publicPath, maxAge: ONE_YEAR)
   # Gzip dynamically rendered content
   .use(express.compress())
