@@ -25,6 +25,7 @@ render = (name, page) ->
   page.render name, ctx
 
 get '/', (page, model) -> 
+  console.log " === GOT REQUEST FOR MAIN PAGE === "
   render 'splash', page
 get '/study', (page, model) ->
   render 'study', page
