@@ -1,13 +1,21 @@
 http = require 'http'
 path = require 'path'
 express = require 'express'
-#gzippo = require 'gzippo'
+gzippo = require 'gzippo'
 derby = require 'derby'
 
 app = require '../app'
 admin = require '../admin'
 
 serverError = require './serverError'
+
+## RACER CONFIGURATION ##
+
+racer = require 'derby/node_modules/racer'
+racer.io.set('transports', ['xhr-polling'])
+unless process.env.NODE_ENV == 'production'
+  racer.use(racer.logPlugin)
+  derby.use(derby.logPlugin)
 
 
 ## SERVER CONFIGURATION ##
@@ -24,9 +32,11 @@ publicPath = path.join root, 'public'
 
 expressApp
   .use(express.favicon())
+
   # Gzip static files and serve from memory
-  .use(express.static(publicPath))
-  #.use(gzippo.staticGzip publicPath, maxAge: ONE_YEAR)
+  .use(gzippo.staticGzip publicPath, maxAge: ONE_YEAR)
+#  .use(express.static(publicPath))
+
   # Gzip dynamically rendered content
   .use(express.compress())
 
