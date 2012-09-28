@@ -1,12 +1,10 @@
 derby = require 'derby'
-{get, view, ready} = derby.createApp module
+i18n = require 'derby-i18n'
+{get, view, ready} = app = i18n.localize derby.createApp(module),
+  availableLocales: ['en', 'ja'],
+  urlScheme: 'path'
 derby.use(require '../../ui')
-
-i18n = require 'i18next'
-i18n.init saveMissing: true, lng: "en-AU", preload: ['jp']
-
-view.fn 't', i18n.t
-view.fn 'locale', i18n.lng
+derby.use(require 'derby-ui-boot')
 
 pages = [
   {url: '/', title: 'Debabel'}

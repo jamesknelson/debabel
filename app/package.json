@@ -7,6 +7,7 @@
     "coffee-script": ">=1.3.3",
     "gzippo": "http://github.com/dbashford/gzippo/tarball/master",
     "derby": "http://github.com/jamesknelson/derby/tarball/numbat",
+    "derby-i18n": "http://github.com/jamesknelson/derby-i18n/tarball/master",
     "derby-ui-boot": "http://github.com/jamesknelson/derby-ui-boot/tarball/numbat",
     "express": "3.x",
     "i18next": "http://github.com/jamesknelson/i18next-node/tarball/numbat"

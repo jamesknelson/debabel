@@ -8,6 +8,7 @@ app = require '../app'
 admin = require '../admin'
 
 serverError = require './serverError'
+error404 = require './error404'
 
 ## RACER CONFIGURATION ##
 
@@ -17,20 +18,19 @@ unless process.env.NODE_ENV == 'production'
   racer.use(racer.logPlugin)
   derby.use(derby.logPlugin)
 
-
 ## SERVER CONFIGURATION ##
 
 expressApp = express()
 server = module.exports = http.createServer expressApp
-
-derby.use(derby.logPlugin)
 store = derby.createStore listen: server
+
 
 ONE_YEAR = 1000 * 60 * 60 * 24 * 365
 root = path.dirname path.dirname __dirname
 publicPath = path.join root, 'public'
 
 expressApp
+#  .use(express.logger())
   .use(express.favicon())
 
   # Gzip static files and serve from memory
@@ -54,6 +54,7 @@ expressApp
 
   # Adds req.getModel method
   .use(store.modelMiddleware())
+
   # Creates an express middleware from the app's routes
   .use(app.router())
   .use(admin.router())
@@ -62,6 +63,4 @@ expressApp
 
 
 ## SERVER ONLY ROUTES ##
-
-expressApp.all '*', (req) ->
-  throw "404: #{req.url}"
+expressApp.all '*', error404(root)

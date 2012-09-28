@@ -15,6 +15,9 @@
         "about_title": "Find Out More",
         "about_description": "Who we are, why we do it, etc."
     },
+    "study": {
+        "do_you_understand_the_sentence": "Do you understand the sentence?"
+    },
     "study_title": "study_title",
     "study_description": "study_description",
     "about_title": "about_title",
