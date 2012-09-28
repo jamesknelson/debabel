@@ -6,12 +6,12 @@
     "menu": {
         "progress": "progress",
         "questions": "質問",
-        "help": "助けて！",
+        "help": "助けて",
         "account": "account"
     },
     "splash": {
         "study_title": "英語を習いましょう！",
-        "study_description": "初めての単語はもうすぐ使えるようになります",
+        "study_description": "初めての単語をすぐに使えるようになります。",
         "about_title": "Debabelについて",
         "about_description": "だれ、なぜ、など"
     },

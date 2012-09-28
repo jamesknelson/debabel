@@ -39,5 +39,5 @@ get '/about', (page, model) ->
 ## CONTROLLER FUNCTIONS ##
 
 ready (model) ->
-  history = app.view.history
+#  history = app.view.history
 
