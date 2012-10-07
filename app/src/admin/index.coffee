@@ -1,35 +1,25 @@
-derby = require 'derby'
-{get, view, ready} = derby.createApp module
-derby.use(require 'derby-ui-boot')
-derby.use(require '../../ui')
+root = require('derby-workspace').createApp module,
+	# derby-workspace options
+	base: '/admin'
 
-{render} = require './shared'
+	# derby-i18n options
+  urlScheme: 'path'
+  availableLocales: ['en', 'ja']
 
-## ROUTES ##
-get '/admin', (page, model) ->
-  render 'dashboard', page
+#
+# Routes
+#
 
-get '/admin/dictionary', (page, model) -> 
-  render 'dictionary', page
+#root.index redirect: 'dashboard'
+root.page 'dashboard', module: require('./dashboard')
 
-get '/admin/sentences', (page, model) ->
-  render 'sentences', page
+root.section 'words', module: require('./words'), (words) ->
+	words.index t: 'browse', (browse) ->
+		browse.modal 'add', space: 'edit', params: { id: 'new' }
+		browse.modal ':id', space: 'edit'
 
-#get '/people' -> (page, model)
-#  model.subscribe('people', 'conf.main.directoryIds', function(err, people) {
-#    model.refList('_people', people, 'conf.main.directoryIds')
-#    render('people', page)
-#  })
-#)
-
-## CONTROLLER FUNCTIONS ##
-
-exports.toggle = ->
-
-
-exports._clickMenu = ->
-  
-
-ready (model) ->
-  history = app.view.history
-
+#root.section 'sentences', module: require('./sentences'), (sentences) ->
+#	sentences.index t: 'browse', (browse,) ->
+#		browse.modal 'add',
+#		browse.modal ':id', space: 'edit'
+#	sentences.page 'polish'

@@ -56,8 +56,8 @@ expressApp
   .use(store.modelMiddleware())
 
   # Creates an express middleware from the app's routes
-  .use(app.router())
   .use(admin.router())
+  .use(app.router())
   .use(expressApp.router)
   .use(serverError root)
 

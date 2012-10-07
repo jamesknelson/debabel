@@ -1,38 +1,11 @@
-<import: src="./dashboard">
-<import: src="./dictionary">
-<import: src="./sentences">
-
 <Title:>
-	Debabel Admin
+	Debabel
 
 <Header:>
   <ui:connectionAlert>
-  <boot:navbar> 
-    <@brand>Debabel &raquo;</@brand>
-        <div class="nav-collapse">
-          <ul class="nav">
-            {{#each pages}}
-              {{#if dropdown}}
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" x-bind="click: toggle" >{{title}} <span class="caret"></span></a>
-                  <menu x-bind="click: _clickMenu" class="dropdown-menu">
-                    <li><a href="#">Browse</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Add new</a></li>
-                    <li><a href="#">Fix this.</a></li>
-                  </menu>
-                </li>
-              {{else}}
-                <li class="{{#if equal(url, activeUrl)}}active{{/}}"><a href="{{url}}">{{title}}</a></li>
-                {{/}}
-            {{/}}
-          </ul>
-        </div>
-  </boot:navbar>
+  <ws:nav>
 
 <Footer:>
-    <hr>
-    <footer>
-      <p>&copy; Numbat Software 2012</p>
-    </footer>
-  </div>
+  <ws:footer>
+    <p>&copy; Numbat Software 2012</p>
+  </ws:footer>
