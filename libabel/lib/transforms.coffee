@@ -1,0 +1,1 @@
+Transforms = new Meteor.Collection "transforms"

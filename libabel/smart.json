@@ -1,0 +1,10 @@
+{
+  "name": "libabel",
+  "description": "Debabel Library",
+  "homepage": "http://www.numbat.com.au",
+  "author": "James Nelson <james@numbat.com.au>",
+  "version": "0.0.1",
+  "packages": {
+    "coffeescript": {}
+  }
+}
