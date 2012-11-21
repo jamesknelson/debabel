@@ -1,3 +1,32 @@
 <template name="transforms">
-	<h1>Transforms</h1>
+  <div class="row-fluid header">
+    <div class="span6">
+      <h2>{{t "transforms.title"}}</h2>
+    </div>
+    <div class="actions span6">
+      <div class="form-inline">
+        <button type="button" class="btn btn-primary pull-right">
+          <i class="icon-plus icon-white"></i>
+        </button>
+        <div class="input-prepend input-append pull-right">
+          <div class="btn-group">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a tabindex="-1" href="#">English</a></li>
+              <li><a tabindex="-1" href="#">Japanese</a></li>
+              <li class="divider"></li>
+              <li><a tabindex="-1" href="#">Newest</a></li>
+              <li><a tabindex="-1" href="#">Oldest</a></li>
+            </ul>
+          </div>
+          <input id="transformSearch" type="text" placeholder="{{t "common.search.placeholder"}}">
+          <button class="btn" type="button">
+            <i class="icon-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

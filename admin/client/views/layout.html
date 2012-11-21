@@ -12,7 +12,7 @@
     <hr>
 
     <footer>
-      <p>&copy; Company 2012</p>
+      <p>&copy; Numbat Software 2012</p>
     </footer>
 
   </div><!--/.fluid-container-->
@@ -27,15 +27,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">デバベル</a>
+          <span class="brand">{{t "layout.title"}}</span>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              {{loginButtons align="right"}}
             </p>
             <ul class="nav">
-              <li class="{{activeness "dashboard"}}"><a href="/">Dashboard</a></li>
-              <li class="{{activeness "patterns"}}"><a href="/patterns">Patterns</a></li>
-              <li class="{{activeness "transforms"}}"><a href="/transforms">Transforms</a></li>
+              <li class="{{activeness "dashboard"}}"><a href="/">{{t "layout.menu.dashboard"}}</a></li>
+              <li class="{{activeness "patterns"}}"><a href="/patterns">{{t "layout.menu.patterns"}}</a></li>
+              <li class="{{activeness "transforms"}}"><a href="/transforms">{{t "layout.menu.transforms"}}</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

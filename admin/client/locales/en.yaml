@@ -1,0 +1,25 @@
+layout:
+  title: Debabel Admin
+  menu:
+    dashboard: Dashboard
+    patterns: Patterns
+    transforms: Transforms
+
+common:
+  search:
+    placeholder: Search...
+  dialog:
+    cancel: Cancel
+    save: Save
+
+dashboard:
+  title: Dashboard
+
+transforms:
+  title: Transforms
+
+patterns:
+  title: Patterns
+
+  editor:
+    title: Pattern Editor

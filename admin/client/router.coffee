@@ -1,7 +1,9 @@
 Meteor.Router.add
   '/': 'dashboard'
 
-  '/patterns': 'patterns'
+  '/patterns': ->
+    Session.set('patternId', false)
+    'patterns'
 
   '/patterns/new': ->
     Session.set('patternId', 'new')
@@ -24,9 +26,9 @@ Meteor.Router.add
 Meteor.Router.filters
   requireLogin: (page) ->
     username = Session.get 'username'
-    if username
+    if Meteor.userId()
       page
     else 
-      'sign_in'
+      'accountsSignIn'
 
-#Meteor.Router.filter 'requireLogin'
+Meteor.Router.filter 'requireLogin'

@@ -1,0 +1,10 @@
+{
+  "name": "meteor-i18n",
+  "description": "Basic i18n for meteor",
+  "homepage": "https://github.com/jamesknelson/meteor-i18n",
+  "author": "James Nelson <self@jamesknelson.com> (http://www.jamesknelson.com)",
+  "version": "0.0.1",
+  "packages": {
+    "yaml": {}
+  }
+}
