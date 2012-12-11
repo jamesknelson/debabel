@@ -5,6 +5,7 @@ Package.describe({
 Package.on_use(function (api, where) {
   api.use('coffeescript', 'server');
 
+  api.add_files('lib/model.coffee', ['client', 'server']);
   api.add_files('lib/patterns.coffee', ['client', 'server']);
   api.add_files('lib/transforms.coffee', ['client', 'server']);
 });

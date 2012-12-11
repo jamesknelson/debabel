@@ -77,21 +77,42 @@
         <h3>{{t "patterns.editor.title"}}</h3>
       </div>
 
-      <div class="modal-body">
-        {{#if error}}
-          <div class="alert alert-error">{{error}}</div>
-        {{/if}}
+      <div class="full-width modal-body">
+        {{#with pattern}}
+          {{#if error}}
+            <div class="alert alert-error">{{error}}</div>
+          {{/if}}
 
-        <label>Title</label>
-        <input type="text" class="title span5">
-
-        <label>Description</label>
-        <textarea class="description span5"></textarea>
-
-        <label class="checkbox">
-          <input type="checkbox" class="private">
-          Private party &mdash; invitees only
-        </label>
+          <table class="pattern-editor table">
+            <tr class="spelling slices">
+              {{#each slices}}
+                <td class="separator"><div class="handle"></div></td>
+                <td class="slice" contenteditable="plaintext-only">{{spelling}}</td>
+              {{/each}}
+            </tr>
+            <tr class="pronunciation slices">
+              {{#each slices}}
+                <td class="separator"><div class="handle"></div></td>
+                <td class="slice" contenteditable="plaintext-only">{{pronunciation}}</td>
+              {{/each}}
+            </tr>
+            <tr class="audio slices">
+              {{#each slices}}
+                <td class="separator"><div class="handle"></div></td>
+                <td class="slice"></td>
+              {{/each}}
+            </tr>
+            <tr class="composition slices">
+              {{#each slices}}
+                <td class="separator"></td>
+                <td class="slice">
+                  <button class="btn btn-small" disabled="true">patternize</button>
+                  <button class="btn btn-small slice-button">slice</button>
+                </td>
+              {{/each}}
+            </tr>
+          </table>
+        {{/with}}
       </div>
 
       <div class="modal-footer">

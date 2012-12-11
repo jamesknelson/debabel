@@ -6,8 +6,8 @@
 preserve-inputs
 accounts-ui
 accounts-password
-router
 yaml
+router
 i18n
 stylus
 coffeescript

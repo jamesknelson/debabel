@@ -1,22 +1,35 @@
+Local = new Meteor.Collection null
+
 Meteor.Router.add
   '/': 'dashboard'
 
   '/patterns': ->
-    Session.set('patternId', false)
+    Session.set 'patternCollection', false
+    Session.set 'patternId', false
     'patterns'
 
   '/patterns/new': ->
-    Session.set('patternId', 'new')
+    Local.insert {
+        slices: [
+          {
+            pronunciation: ''
+            spelling: ''
+          }
+        ]
+      }, (err, id) -> 
+        Session.set 'patternCollection', 'Local'
+        Session.set 'patternId', id
     'patterns'
 
   '/patterns/:id': (id) ->
-    Session.set('patternId', id)
+    Session.set 'patternCollection', 'Patterns'
+    Session.set 'patternId', id
     'patterns'
 
   '/transforms': 'transforms'
 
   '/transforms/new': ->
-    Session.set('patternId', 'new')
+    Session.set('transformId', 'new')
     'transforms'
 
   '/transforms/:id': (id) ->

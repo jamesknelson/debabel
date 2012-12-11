@@ -1,0 +1,90 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/underscore.min.js"></script>
+    <script type="text/javascript" src="js/pattern-editor.js"></script>
+    <script type="text/javascript">
+      $(function() {
+          var editor = new PatternEditor(document.getElementById('pattern'));
+      });
+    </script>
+  </head>
+  <body>
+    <div id="pattern-editor" class="modal">
+
+      <div class="modal-nav">
+        <ul class="nav nav-list pages">
+          <li class="active">
+            <a href="#composition">Composition <i class="icon-chevron-right"></i> <span class="badge badge-important">24</span></a></a>
+          </li>
+          <li><a href="#audio">Audio <i class="icon-chevron-right"></i></a></li>
+          <li><a href="#sense">Sense <i class="icon-chevron-right"></i></a></li>
+          <li><a href="#sense">Dialogues <i class="icon-chevron-right"></i></a></li>
+          <li><a href="#history">History <i class="icon-chevron-right"></i></a></li>
+        </ul>
+
+        <ul class="labels">
+          <li class="dropdown">
+            <a class="dropdown-toggle label"
+               data-toggle="dropdown"
+               href="#">
+                Public
+                <b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="#">Public</a></li>
+              <li><a href="#">Draft</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle label"
+               data-toggle="dropdown"
+               href="#">
+                Word
+                <b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="#">Part</a></li>
+              <li><a href="#">Word</a></li>
+              <li><a href="#">Collocation</a></li>
+              <li><a href="#">Figure of Speech</a></li>
+              <li><a href="#">Expression</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle label"
+               data-toggle="dropdown"
+               href="#">
+                Japanese
+                <b class="caret"></b>
+              </a>
+            <ul class="dropdown-menu">
+              <li class="active"><a href="#">Japanese</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li><a class="label" href="#"> + </a></li>
+        </ul>
+      </div>
+
+      <div class="modal-body">
+        <div id="structure">
+          <div id="pattern">
+            <span class="word"><ruby><rb>自殺</rb><rt>じさつ</rt></ruby></span><span class="word">予防</span><span class="word">の</span><span class="word">ため</span><span class="word">に</span>、<span class="word">私</span><span class="word">から</span><span class="word">国民</span><span class="word">の</span><span class="word">皆さん</span><span class="word">に</span>お願い</span><span class="word">が</span><span class="word">あります</span>．
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" class="btn btn-left"><i class="icon-chevron-left"></i></a>
+        <a href="#" class="btn cancel"><i class="icon-off"></i></a>
+        <a href="#" class="btn btn-left"><i class="icon-chevron-right"></i></a>
+        <a href="#" class="btn btn-primary save">Save</a>
+      </div>
+    </div>
+  </body>
+</html>

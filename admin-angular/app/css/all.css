@@ -1,0 +1,112 @@
+.modal-nav {
+  width: 160px;
+  float: left;
+  box-sizing: border-box;
+}
+.modal-nav .nav li > a {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 8px 14px;
+}
+.modal-nav .nav i {
+  float: right;
+  opacity: 0.25;
+}
+.modal-nav .nav a:hover i {
+  opacity: 0.5;
+}
+.modal-nav .nav li.active a i {
+  opacity: 1;
+}
+.modal-nav .nav i {
+  margin-top: 2px;
+}
+.modal-nav .nav .badge {
+  color: #fff;
+  padding: 4px;
+  margin: -1px 6px 0 0;
+  min-width: 14px;
+  text-align: center;
+  float: right;
+}
+.modal-nav + .modal-body {
+  width: 100%;
+  margin-right: -160px;
+  padding-right: 175px;
+  float: right;
+  box-sizing: border-box;
+  min-height: 320px;
+  border-left: 1px dotted #e5e5e5;
+}
+.modal-nav + .modal-body + .modal-footer {
+  clear: both;
+}
+hr {
+  clear: both;
+}
+.header .actions {
+  padding-top: 13px;
+}
+.header .actions .input-append {
+  margin-right: 10px;
+}
+#patterns table td {
+  vertical-align: top;
+}
+#patterns table td.player,
+#patterns table td.action,
+#patterns table td.language {
+  width: 1px;
+}
+#patterns table td.text {
+  padding-top: 8px;
+}
+#patterns table td.text a {
+  color: #000;
+}
+#pattern-editor {
+  width: 90%;
+  margin-left: -45%;
+  height: 90%;
+  margin-top: -45%;
+}
+#pattern-editor .modal-body {
+  padding: 0;
+}
+#pattern-editor .modal-footer {
+  text-align: left;
+}
+#pattern-editor .modal-footer .btn-primary {
+  float: right;
+  margin-left: 10px;
+}
+#pattern-editor .dropdown-toggle.label .caret {
+  margin-top: 5px;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+#pattern-editor .labels {
+  list-style: none;
+  margin: 5px 0 0 5px;
+  padding: 0;
+}
+#pattern-editor .labels li a {
+  float: left;
+  padding: 5px;
+  margin: 5px;
+  min-width: 14px;
+  text-align: center;
+}
+[contenteditable] {
+  padding: 3px;
+  white-space: nowrap;
+}
+#structure p {
+  font-size: 18px;
+  line-size: 24px;
+  padding: 0 15px;
+}
+#structure p span.word {
+  display: inline-block;
+  border-right: 1px dashed #e0e0e0;
+  padding: 15px 2px 5px 0;
+}

@@ -1,0 +1,21 @@
+.PE-input-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 3px;
+  height: 0px;
+}
+.PE-input-wrapper input {
+  position: absolute;
+  padding: 0;
+  width: 1px;
+  height: 1em;
+  outline: none;
+}
+.PE-selection {
+  position: relative;
+  z-index: 1;
+}
+.PE-content-wrapper {
+  position: relative;
+  outline: none;
+}

@@ -21,7 +21,7 @@
 #   "compound":  An expression which doesn't add any more meaning to
 #                it's components. Used for examples only.
 # language:       
-#   2-character language code (eg. EN, JP)
+#   2-character language code (eg. EN, JA)
 # history:
 #   Array of changes and who they made them. Includes initial source.
 #
@@ -33,21 +33,12 @@
 
 Patterns = new Meteor.Collection "patterns"
 
-# TODO: limit to admins
 Patterns.allow
-  # Don't allow remote inserts, must use createExpression
-  insert: (userId, expression) -> false
+  insert: (userId, pattern) -> true
   update: (userId, patterns, fields, modifier) -> true
-    # A good improvement would be to validate the type of the new
-    # value of the field (and if a string, the length.) In the
-    # future Meteor will have a schema system to makes that easier.
-
-    # false if userId != an admin user id
   remove: (userId, patterns) -> true
-    # Validations could go here too in the future
 
-    # false if userId != an admin user id
-
+  
 Meteor.methods
   createExpression: (o) ->
     o ||= {}
@@ -68,7 +59,7 @@ Meteor.methods
     unless this.userId
       throw new Meteor.Error 403, "You must be logged in"
 
-    Patterns.insert
+    Pattern.insert
       published: !! o.published
       source: o.source
       language: o.language

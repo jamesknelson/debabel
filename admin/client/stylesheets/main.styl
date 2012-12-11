@@ -18,3 +18,65 @@ hr
 			padding-top: 8px
 			a
 				color: black
+
+.full-width.modal-body
+	padding: 0
+
+	.normal-width
+		padding: 15px
+
+table.pattern-editor
+	min-width: 100%
+	border-collapse: separate
+
+	tr:first-child td
+		border-top: 0
+
+	.spelling .slice, .spelling .handle,
+	.pronunciation .slice, .pronunciation .handle
+		height: 30px
+	.audio .slice, .audio .handle
+		height: 40px
+	.composition .slice
+		height: 27px
+
+	td.slice
+		padding: 3px
+		border-radius: 0
+		white-space: nowrap
+		min-width: 20px
+		min-height: 1em
+
+	.audio td.slice
+		background-color: #f8f8f8
+
+	.composition 
+		td.separator
+			width: 1px
+			border: 1px solid #f0f0f0
+
+			background-color: #ddd
+		td.slice
+			background-color: #f0f0f0
+
+			button
+				float: right
+
+	td.separator
+		&:first-child
+			display: none
+
+		padding: 0
+
+		&, .handle
+			width: 3px
+		.handle
+			&:hover
+				position: absolute
+				width: 9px
+				margin: 0 6px 0 -3px
+
+			background-color: #ddd
+			width: 3px
+			padding: 3px 0
+			cursor: ew-resize
